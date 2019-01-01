@@ -42,7 +42,6 @@ class Directory(override val parentPath: String, override val name: String, val 
     else new Directory(parentPath, name, contents.filter(x => !x.name.equals(entryName)))
 
   def isRoot: Boolean = parentPath.isEmpty
-
   override def isDirectory: Boolean = true
   override def isFile: Boolean = false
   override def asDirectory: Directory = this
